@@ -61,7 +61,7 @@ export default function Navigation() {
 
           <UlItem>
             <LiItem>
-              <Button onClick={toggleModal} variant="text">
+              <Button onClick={toggleModal} variant="text" type="button">
                 <Envelope />
               </Button>
             </LiItem>

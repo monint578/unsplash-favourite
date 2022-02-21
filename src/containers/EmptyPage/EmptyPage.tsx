@@ -8,7 +8,9 @@ export default function EmptyPage() {
     <Container>
       <h2>Favourite image list is empty</h2>
       <NavLink to="/">
-        <Button variant="contained">Discover</Button>
+        <Button variant="contained" type="button">
+          Discover
+        </Button>
       </NavLink>
     </Container>
   );

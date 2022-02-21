@@ -16,7 +16,7 @@ export function ThemeButton(): JSX.Element {
   }
 
   return (
-    <Button onClick={swapTheme}>
+    <Button onClick={swapTheme} type="button">
       {theme === "light" ? <Moon /> : <Sun />}
     </Button>
   );
@@ -28,7 +28,7 @@ interface Props {
 
 const Toggle = ({ theme, toggleTheme }: Props) => {
   return (
-    <Button onClick={toggleTheme}>
+    <Button onClick={toggleTheme} type="button">
       {theme === "light" ? <Moon /> : <Sun />}
     </Button>
   );

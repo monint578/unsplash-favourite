@@ -56,6 +56,7 @@ export const ImageDetailsDialog: FunctionComponent<ImageDetailsDialogProps> = ({
               <Button
                 onClick={() => handleClick()}
                 variant={isFavourite ? "contained" : "text"}
+                type="button"
               >
                 <Heart />
               </Button>
