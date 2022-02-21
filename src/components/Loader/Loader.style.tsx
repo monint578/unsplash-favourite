@@ -18,7 +18,7 @@ export const Loaders = styled.div`
   border-top: 10px solid ${({ theme }) => theme.text};
   width: 50px;
   height: 50px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 
   @-webkit-keyframes spin {
