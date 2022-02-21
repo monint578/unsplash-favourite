@@ -32,25 +32,19 @@ export const Modal: FunctionComponent<ModalProps> = ({
 }) => {
   const [fadeType, setFadeType] = useState<string>("in");
 
-  const onKeyDown = useCallback((event: any) => {
+  const onKeyDown = (event: KeyboardEvent) => {
     if (event.keyCode === 27 && isOpen) {
       handleClose();
     }
-  }, []);
+  };
 
   useEffect(() => {
     isOpen
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
-
-    document.addEventListener("keydown", onKeyDown);
-    window.addEventListener("keyup", onKeyDown, false);
-
-    setTimeout(() => setFadeType("in"), 10);
-
+    document.addEventListener("keydown", onKeyDown, false);
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      window.removeEventListener("keyup", onKeyDown, false);
+      document.removeEventListener("keydown", onKeyDown, false);
     };
   }, [isOpen]);
 
@@ -62,7 +56,6 @@ export const Modal: FunctionComponent<ModalProps> = ({
   const modal = (
     <React.Fragment>
       <Backdrop onClick={handleClick} />
-
       <MoveFocusInside>
         <Wrapper
           aria-modal

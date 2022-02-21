@@ -58,6 +58,7 @@ export const CloseButton = styled.button`
   right: 0;
   top: 0;
   margin: 10px 15px;
+  z-index: 100;
 
   :hover {
     cursor: pointer;
