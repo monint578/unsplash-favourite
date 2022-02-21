@@ -40,6 +40,13 @@ const globalStyle = createGlobalStyle<{ theme: ThemeProps }>`
       transition: all 0.2s ease-in-out;
     }
 
+    a {
+      color: ${({ theme }) => theme.text};
+    }
+
+    a:visited {
+      color: ${({ theme }) => theme.text};
+    }
 
   `;
 
