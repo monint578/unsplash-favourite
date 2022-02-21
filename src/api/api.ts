@@ -11,12 +11,13 @@ export const useUnslashPhotoList = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const { storedValue } = useFavouriteImageStorage("favouriteImageList");
-  
+
   const apiKey = `${process.env.REACT_APP_API_KEY}`;
 
   useEffect(() => {
     fetch(
-      "https://api.unsplash.com/search/photos?page=1&per_page=50&query=nature&client_id=" + apiKey
+      "https://api.unsplash.com/search/photos?page=1&per_page=50&query=nature&client_id=" +
+        apiKey
     )
       .then((res) => res.json())
       .then(
@@ -29,7 +30,7 @@ export const useUnslashPhotoList = () => {
           setError(error);
         }
       );
-  }, []);
+  }, [apiKey]);
 
   const parsedImagesList: UnsplashImage[] = useMemo(
     () => imageListData?.filter((item: any) => storedValue.includes(item.id)),
