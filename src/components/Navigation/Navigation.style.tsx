@@ -93,11 +93,3 @@ export const LiItem = styled.li`
     }
   }
 `;
-
-// export const StyledNavLink = styled(NavLink)`
-//   color: blue;
-
-//   &.${props => (props as any).activeClassName} {
-//     color: red;
-//   }
-// `;

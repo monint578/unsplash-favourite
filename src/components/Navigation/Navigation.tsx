@@ -19,9 +19,7 @@ import {
 export default function Navigation() {
   const { isModalOpen, toggleModal } = useModal();
 
-  const onConfirm = useCallback((event: any) => {
-    // const miau =
-  }, []);
+  const handleSubmit = useCallback(() => {}, []);
 
   return (
     <>
@@ -78,7 +76,7 @@ export default function Navigation() {
         modalSize="md"
         modalContent={
           <SubscriptionDialog
-            handleSubmit={() => onConfirm}
+            handleSubmit={() => handleSubmit}
             message="Are you sure you want to delete element?"
           />
         }
