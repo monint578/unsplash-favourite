@@ -4,7 +4,7 @@ import { ReactComponent as Photo } from "../../assets/photo.svg";
 import { ReactComponent as Envelope } from "../../assets/envelope.svg";
 import { ReactComponent as Heart } from "../../assets/heart.svg";
 import { NavLink } from "react-router-dom";
-import { ThemeButton } from "../../components/TogglerButton/TogglerButton";
+import { ThemeButton } from "../ThemeButton/ThemeButton";
 import { Modal } from "../../components/Modal/Modal";
 import { SubscriptionDialog } from "../../containers/Dialogs/SubscriptionDialog/SubscriptionDialog";
 import { useModal } from "../../state/useModal";
