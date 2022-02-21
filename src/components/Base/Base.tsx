@@ -1,19 +1,13 @@
 import React, { PropsWithChildren } from "react";
+import { Flex } from "../../theme/GlobalComponents.style";
 import Navigation from "../Navigation/Navigation";
-import { Container, Section } from "./Base.style";
+import { Section } from "./Base.style";
 
 export default function Base({ children }: PropsWithChildren<{}>) {
   return (
-    <Container>
+    <Flex>
       <Navigation />
       <Section>{children}</Section>
-      {/* <Container
-        maxWidth="lg"
-        disableGutters
-        classes={{ root: classes.container, maxWidthLg: classes.maxWidthLg }}
-      >
-        {children}
-      </Container> */}
-    </Container>
+    </Flex>
   );
 }
